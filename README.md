@@ -3,7 +3,7 @@
 Single-file animated invitation website. Venue photos Farm 5057 ke PDF se nikaal ke WebP me optimize kiye gaye hain.
 
 **Speed**
-- `index.html` — 74 KB raw, **21 KB gzipped**
+- `index.html` — single file, **~27 KB gzipped**
 - Pehla paint ke liye sirf **~75 KB** chahiye (HTML + hero photo)
 - **0 external requests** — koi Google Font, koi CDN, koi library nahi
 - Measured: First Contentful Paint **88 ms**, DOMContentLoaded **40 ms**
@@ -43,6 +43,27 @@ Time **12:00 PM onwards** (poora din) set kar diya hai.
 
 ### Google Maps ka exact pin
 `mapUrl` me abhi search query hai. Exact location ke liye: Google Maps me farm kholo → Share → link copy → `mapUrl` me paste.
+
+---
+
+## 2. Themes
+
+Site pe **4 themes** hain. Pehli baar koi kholta hai to usse ek palette chunne ko milta hai, aur choice uske device pe yaad reh jaati hai (dobara nahi poochhega). Top-right me palette button se kabhi bhi badal sakte hain.
+
+| Theme | Kaisa hai |
+|---|---|
+| **Emerald & Gold** | Forest green + champagne. Venue photos ke saath sabse accha match (default) |
+| **Midnight & Gold** | Navy/starry night + gold |
+| **Wine & Rose Gold** | Burgundy + rose gold. Warm aur romantic |
+| **Ink & Champagne** | Lagbhag kaala + warm ivory. Minimal — rang photos se aata hai |
+
+Sab kuch CSS variables pe chalta hai, to background, envelope, wax seal, invitation card ki ink, canvas particles aur confetti — sab theme ke saath badalte hain. Dress code chips ke naam bhi har theme ke apne hain.
+
+**Naya theme add karna** — `index.html` me `THEMES` array me entry daalo, aur CSS me `:root[data-theme="tumhara-id"]{ ... }` block bana ke tokens define kar do. Baaki sab apne aap chal jayega.
+
+**Default theme badalna** — `THEMES` array me use pehle number par le aao.
+
+**Picker band karna** (agar sabko ek hi theme dikhani ho) — `start()` me `if (savedTheme())` ko `if (true)` kar do.
 
 ---
 
