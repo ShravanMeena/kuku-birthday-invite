@@ -117,6 +117,32 @@ Jisme photo hai wo lightbox me full-screen khulta hai.
 
 ---
 
+## 3b. "The Night" ke 4 cards
+
+Ye cards `CONFIG.night` se aate hain:
+
+```js
+night: [
+  { title:"DJ Night", sub:"Truss lights, open-air floor, till late",
+    img:"photos/dj-floor.webp", icon:"disc" },
+  ...
+]
+```
+
+- `icon` ke options: `disc` (turntable), `waves` (pool), `glass` (cocktail), `tree` (lawn)
+- `title` / `sub` kuch bhi likh sakte ho
+- Card add/remove karna ho to array me entry add/delete kar do
+
+**⚠️ In cards ki photos abhi farmhouse ki hi hain** — PDF me DJ ya bar ki asli photo nahi thi. Agar tumhare paas DJ setup, bar counter ya pichhli party ki photo hai to:
+
+```bash
+magick apni-dj-photo.jpg -resize 760x -quality 62 photos/dj-floor.webp
+```
+
+Usi naam se save kar do, kuch aur badalne ki zarurat nahi. Ya `img` me naya path likh do.
+
+---
+
 ## 4. Live karna
 
 Koi build step nahi. Poora folder (`index.html` + `photos/`) upload kar do:
