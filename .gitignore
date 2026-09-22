@@ -1,0 +1,10 @@
+# macOS
+.DS_Store
+
+# test artifacts
+.playwright-mcp/
+
+# memories: sirf optimized WebP commit karo, phone ki heavy originals nahi
+photos/memories/*
+!photos/memories/README.txt
+!photos/memories/kuku-*.webp
